@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.wdq.crm.classes.domain.CrmClasses" table="crm_class">
+        <id name="classId">
+            <generator class="uuid"></generator>
+        </id>
+        <property name="name"></property>
+        <property name="beginTime">
+            <column name="beginTime" sql-type="datetime"></column>
+        </property>
+        <property name="endTime">
+            <column name="endTime" sql-type="datetime"></column>
+        </property>
+        <property name="status"></property>
+        <property name="totalCount" type="int"></property>
+        <property name="upgradeCount" type="int"></property>
+        <property name="changeCount" type="int"></property>
+        <property name="runoffCount" type="int"></property>
+        <property name="remark"></property>
+        <property name="uploadTime">
+            <column name="uploadTime" sql-type="datetime"></column>
+        </property>
+        <property name="uploadPath"></property>
+        <property name="uploadFilename"></property>
+        <many-to-one name="courseTypeId" class="com.wdq.crm.coursetype.domain.CrmCoursetype" column="courseTypeId"></many-to-one>
+    </class>
+</hibernate-mapping>

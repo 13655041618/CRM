@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="sta" extends="common" namespace="/">
+        <action name="staffAction_*" class="com.wdq.crm.staff.web.action.StaffAction" method="{1}">
+            <result type="redirectAction">staffAction_home</result>
+            <result name="home">/WEB-INF/pages/frame.jsp</result>
+            <result name="findAll">/WEB-INF/pages/staff/listStaff.jsp</result>
+        </action>
+    </package>
+</struts>
