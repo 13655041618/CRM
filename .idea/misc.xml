@@ -25,6 +25,32 @@
             </SvnBranchConfiguration>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchUrls">
+                <list>
+                  <option value="svn://localhost/crm/src/src/branches" />
+                  <option value="svn://localhost/crm/src/src/tags" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="svn://localhost/crm/src/src/trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/wdq/crm/courseType">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchUrls">
+                <list>
+                  <option value="svn://localhost/crm/src/com/wdq/crm/courseType/branches" />
+                  <option value="svn://localhost/crm/src/com/wdq/crm/courseType/tags" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="svn://localhost/crm/src/com/wdq/crm/courseType/trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
       </map>
     </option>
     <option name="mySupportsUserInfoFilter" value="true" />
