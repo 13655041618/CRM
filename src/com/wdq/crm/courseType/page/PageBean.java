@@ -55,6 +55,10 @@ public class PageBean<T> {
                 this.start = 1;
                 this.end = 10;
             }
+            if (this.end > totalPage) {
+                this.start = this.totalPage - 9;
+                this.end = this.totalPage;
+            }
         }
 
     }

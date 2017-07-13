@@ -58,7 +58,10 @@ public class CourseTypeAction extends ActionSupport implements ModelDriven<CrmCo
      * @return
      */
     public String addOrEdit() {
-        courseTypeService.addOrEdit(crmCourseType);
+        if (StringUtils.isNotBlank(crmCourseType.getCourseName()) || crmCourseType.getCourseCost()!=null ||
+                StringUtils.isNotBlank(crmCourseType.getRemark()) || crmCourseType.getTotal()!=null) {
+            courseTypeService.addOrEdit(crmCourseType);
+        }
         return "addOrEdit";
     }
 }

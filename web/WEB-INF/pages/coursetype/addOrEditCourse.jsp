@@ -33,7 +33,7 @@
 
 <s:form namespace="/" action="courseTypeAction_addOrEdit">
 	<s:if test="courseTypeId != null">
-		<s:hidden name="%{'courseTypeId'}"></s:hidden>
+		<s:textfield name="%{'courseTypeId'}"></s:textfield>
 	</s:if>
 	<table width="88%" border="0" class="emp_table" style="width:80%;">
 	  <tr>
