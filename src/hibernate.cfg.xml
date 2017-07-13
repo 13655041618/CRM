@@ -21,7 +21,7 @@
         <mapping resource="com/wdq/crm/department/domain/CrmDepartment.hbm.xml"></mapping>
         <mapping resource="com/wdq/crm/post/domain/CrmPost.hbm.xml"></mapping>
         <mapping resource="com/wdq/crm/classes/domain/CrmClasses.hbm.xml"></mapping>
-        <mapping resource="com/wdq/crm/coursetype/domain/CrmCoursetype.hbm.xml"></mapping>
         <mapping resource="com/wdq/crm/staff/domain/CrmStaff.hbm.xml"></mapping>
+        <mapping resource="com/wdq/crm/courseType/domain/CrmCourseType.hbm.xml"></mapping>
     </session-factory>
 </hibernate-configuration>

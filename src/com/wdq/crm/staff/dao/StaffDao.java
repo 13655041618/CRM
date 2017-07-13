@@ -17,4 +17,7 @@ public interface StaffDao {
     CrmStaff find(String loginName,String loginPwd);
 
     List<CrmStaff> findAll();
+
+    CrmStaff findStaffById(String staffId);
+
 }

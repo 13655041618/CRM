@@ -27,4 +27,6 @@
     </package>
 
     <include file="config/struts/struts-staff.xml"></include>
+    <include file="config/struts/struts-post.xml"></include>
+    <include file="config/struts/struts-courseType.xml"></include>
 </struts>

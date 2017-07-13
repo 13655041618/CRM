@@ -22,4 +22,10 @@ public class StaffDaoImpl extends HibernateDaoSupport implements StaffDao{
     public List<CrmStaff> findAll() {
         return (List<CrmStaff>) this.getHibernateTemplate().find("from CrmStaff");
     }
+
+    @Override
+    public CrmStaff findStaffById(String staffId) {
+        return this.getHibernateTemplate().get(CrmStaff.class,staffId);
+    }
+
 }

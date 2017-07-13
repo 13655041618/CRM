@@ -26,4 +26,23 @@ public class StaffServiceImpl implements StaffService {
     public List<CrmStaff> findAllStaff() {
         return staffDao.findAll();
     }
+
+    @Override
+    public CrmStaff findStaffById(String staffId) {
+        return staffDao.findStaffById(staffId);
+    }
+
+    @Override
+    public void update(CrmStaff crmStaff) {
+        //更新某个用户，不需要执行update操作，因为hibernate的一级缓存中存在findStaff的快照，当findStaff的值被重新设置了之后，将比对快照中的数据，由于不一致会自动更新到数据库
+        CrmStaff findStaff = staffDao.findStaffById(crmStaff.getStaffId());
+        if (!findStaff.getLoginPwd().equals(crmStaff.getLoginPwd())) {
+            findStaff.setLoginPwd(MyStringUtil.getMD5Value(crmStaff.getLoginPwd()));
+        }
+        findStaff.setLoginName(crmStaff.getLoginName());
+        findStaff.setStaffName(crmStaff.getStaffName());
+        findStaff.setGender(crmStaff.getGender());
+        findStaff.setOnDutyDate(crmStaff.getOnDutyDate());
+        findStaff.setPost(crmStaff.getPost());
+    }
 }

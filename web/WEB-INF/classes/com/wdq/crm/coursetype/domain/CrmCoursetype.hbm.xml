@@ -3,7 +3,7 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="com.wdq.crm.coursetype.domain.CrmCoursetype" table="crm_course_type">
+    <class name="com.wdq.crm.courseType.domain.CrmCourseType" table="crm_course_type">
         <id name="courseTypeId">
             <generator class="uuid"></generator>
         </id>

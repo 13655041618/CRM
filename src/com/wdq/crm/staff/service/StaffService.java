@@ -11,4 +11,9 @@ public interface StaffService {
     CrmStaff login(CrmStaff crmStaff);
 
     List<CrmStaff> findAllStaff();
+
+    CrmStaff findStaffById(String staffId);
+
+
+    void update(CrmStaff crmStaff);
 }

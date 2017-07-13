@@ -42,8 +42,11 @@
             <tx:method name="find*" read-only="true"/>
         </tx:attributes>
     </tx:advice>
-    <aop:config>
+    <aop:config  proxy-target-class="true">
         <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.wdq.crm.*.service.*.* (..))"></aop:advisor>
     </aop:config>
     <import resource="applicationContext-staff.xml"></import>
+    <import resource="applicationContext-department.xml"></import>
+    <import resource="applicationContext-post.xml"></import>
+    <import resource="applicationContext-courseType.xml"></import>
 </beans>
