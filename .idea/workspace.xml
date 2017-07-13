@@ -1,59 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="755f032c-dead-4f96-8386-3aabfa084d17" name="Default" comment="测试提交2017/7/13 12:36">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/wdq/crm/classes/service/ClassService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/wdq/crm/courseType/dao/CourseTypeDao.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/wdq/crm/courseType/dao/CourseTypeDaoImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/wdq/crm/courseType/page/PageBean.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/wdq/crm/courseType/page/PageHibernateCallBack.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/wdq/crm/courseType/service/CourseTypeService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/wdq/crm/courseType/service/CourseTypeServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/wdq/crm/courseType/web/action/CourseTypeAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/wdq/crm/department/dao/DepartmentDao.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/wdq/crm/department/dao/DepartmentDaoImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/wdq/crm/department/service/DepartmentService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/wdq/crm/department/service/DepartmentServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/wdq/crm/post/dao/PostDao.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/wdq/crm/post/dao/PostDaoImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/wdq/crm/post/service/PostService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/wdq/crm/post/service/PostServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/com/wdq/crm/post/web/action/PostAction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/cglib-2.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-beanutils-1.8.3.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-collections-3.2.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-lang-2.6.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/ezmorph-1.0.6.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/json-lib-2.4-jdk15.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/wdq/crm/classes/service/ClassService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/wdq/crm/courseType/dao/CourseTypeDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/wdq/crm/courseType/dao/CourseTypeDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/wdq/crm/courseType/page/PageBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/wdq/crm/courseType/page/PageHibernateCallBack.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/wdq/crm/courseType/service/CourseTypeService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/wdq/crm/courseType/service/CourseTypeServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/wdq/crm/courseType/web/action/CourseTypeAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/wdq/crm/department/dao/DepartmentDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/wdq/crm/department/dao/DepartmentDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/wdq/crm/department/service/DepartmentService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/wdq/crm/department/service/DepartmentServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/wdq/crm/post/dao/PostDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/wdq/crm/post/dao/PostDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/wdq/crm/post/service/PostService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/wdq/crm/post/service/PostServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/wdq/crm/post/web/action/PostAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/config/spring/applicationContext-courseType.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/config/spring/applicationContext-department.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/config/spring/applicationContext-post.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/config/struts/struts-courseType.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/config/struts/struts-post.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/config/spring/applicationContext-courseType.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/config/spring/applicationContext-department.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/config/spring/applicationContext-post.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/config/struts/struts-courseType.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/classes/config/struts/struts-post.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="755f032c-dead-4f96-8386-3aabfa084d17" name="Default" comment="测试提交2017/7/13 13:13">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -146,7 +94,7 @@
       <file leaf-file-name="CourseTypeServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/wdq/crm/courseType/service/CourseTypeServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
+            <state relative-caret-position="217">
               <caret line="92" column="67" selection-start-line="92" selection-start-column="67" selection-end-line="92" selection-end-column="67" />
               <folding>
                 <element signature="method#findAll#1;class#CourseTypeServiceImpl#0" expanded="false" />
@@ -1133,7 +1081,7 @@
       <workItem from="1499817953213" duration="7199000" />
       <workItem from="1499864959410" duration="2750000" />
       <workItem from="1499903100138" duration="6950000" />
-      <workItem from="1499921273999" duration="1505000" />
+      <workItem from="1499921273999" duration="2009000" />
     </task>
     <task id="LOCAL-00001">
       <created>1499675740659</created>
@@ -1184,11 +1132,18 @@
       <option name="project" value="LOCAL" />
       <updated>1499921702375</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="测试提交2017/7/13 13:13">
+      <created>1499922799748</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1499922799748</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101068000" />
+    <option name="totallyTimeSpent" value="101572000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1211,7 +1166,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19509594" sideWeight="0.5151515" order="2" side_tool="true" content_ui="tabs" />
@@ -1259,7 +1214,8 @@
     <MESSAGE value="测试提交" />
     <MESSAGE value="测试提交2" />
     <MESSAGE value="测试提交2017/7/13 12:36" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试提交2017/7/13 12:36" />
+    <MESSAGE value="测试提交2017/7/13 13:13" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试提交2017/7/13 13:13" />
     <option name="CHANGE_BROWSER_SETTINGS">
       <map>
         <entry key="svn">
@@ -1679,7 +1635,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/wdq/crm/courseType/service/CourseTypeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
+        <state relative-caret-position="217">
           <caret line="92" column="67" selection-start-line="92" selection-start-column="67" selection-end-line="92" selection-end-column="67" />
           <folding>
             <element signature="method#findAll#1;class#CourseTypeServiceImpl#0" expanded="false" />
