@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
 <link href="${pageContext.request.contextPath}/css/sys.css" type="text/css" rel="stylesheet" />
-
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/Calendar.js"></script>
 </head>
 
 <body class="emp_body">
@@ -20,44 +20,50 @@
 <table border="0" cellspacing="0" cellpadding="0"  class="wukuang"width="100%">
   <tr>
     <td width="1%"><img src="${pageContext.request.contextPath}/images/tleft.gif"/></td>
-    <td width="44%" align="left">[编辑课程]</td>
+    <td width="44%" align="left">[课表上传]</td>
    
     <td width="52%"align="right">
-       <a href="javascript:void(0)" onclick="javascript:document.forms[0].submit();"><img src="${pageContext.request.contextPath}/images/button/save.gif" /></a>
-       <a href="#"><img src="${pageContext.request.contextPath}/images/button/tuihui.gif" /></a>
+    	<a href="javascript:void(0)" onclick="javascript:document.forms[0].submit();">
+    		<img src="${pageContext.request.contextPath}/images/button/save.gif" />
+    	</a>
+       <a href="javascript:void(0)" onclick="history.go(-1)"><img src="${pageContext.request.contextPath}/images/button/tuihui.gif" /></a>
       
     </td>
     <td width="3%" align="right"><img src="${pageContext.request.contextPath}/images/tright.gif"/></td>
   </tr>
 </table>
 
-<s:form namespace="/" action="courseTypeAction_addOrEdit">
-	<s:if test="courseTypeId != null">
-		<s:hidden name="%{'courseTypeId'}"></s:hidden>
-	</s:if>
+<s:form namespace="/" action="classesAction_upload" enctype="multipart/form-data">
+	<s:hidden name="%{'classId'}"></s:hidden>
 	<table width="88%" border="0" class="emp_table" style="width:80%;">
 	  <tr>
-	    <td width="10%">课程类别：</td>
-	    <td width="20%"><s:textfield name="%{'courseName'}"/> </td>
-	    <td width="8%">总学时：</td>
-	    <td width="62%"><s:textfield name="%{'total'}"/> </td>
-	  </tr>
-	  <tr>
-	    <td>课程费用：</td>
-	    <td><s:textfield name="%{'courseCost'}"/> </td>
-	    <td></td>
-	    <td></td>
-	  </tr>
-	  <tr>
-	    <td>课程简介：</td>
-	    <td>&nbsp;</td>
-	    <td>&nbsp;</td>
+	    <td width="120">课程类别：</td>
+	    <td><s:property value="courseType.courseName" /></td>
 	    <td>&nbsp;</td>
 	  </tr>
 	  <tr>
-	    <td colspan="4"><s:textarea name="%{'remark'}" /></td>
+	    <td>班级：</td>
+	    <td><s:property value="name" /> </td>
+	    <td>&nbsp;</td>
+	  </tr>
+	  <tr>
+	    <td>上次上传时间：</td>
+	    <td><s:date name="uploadTime" format="yyyy-MM-dd"/> </td>
+	    <td>&nbsp;</td>
+	  </tr>
+	  <tr>
+	    <td>选择课表：</td>
+	    <td>&nbsp;</td>
+	    <td>&nbsp;</td>
+	  </tr>
+	  <tr>
+	    <td colspan="3">
+	    	<s:file name="schedule"/>
+	    </td>
 	  </tr>
 	</table>
 </s:form>
+
 </body>
 </html>
+    

@@ -3,6 +3,7 @@ package com.wdq.crm.courseType.web.action;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
+import com.wdq.crm.base.BaseAction;
 import com.wdq.crm.courseType.domain.CrmCourseType;
 import com.wdq.crm.courseType.page.PageBean;
 import com.wdq.crm.courseType.service.CourseTypeService;
@@ -13,31 +14,12 @@ import java.util.List;
 /**
  * Created by haier on 2017/7/11.
  */
-public class CourseTypeAction extends ActionSupport implements ModelDriven<CrmCourseType> {
-    private CrmCourseType crmCourseType = new CrmCourseType();
-    @Override
-    public CrmCourseType getModel() {
-        return crmCourseType;
-    }
-
-    private CourseTypeService courseTypeService;
-
-    public void setCourseTypeService(CourseTypeService courseTypeService) {
-        this.courseTypeService = courseTypeService;
-    }
-    private int pageNum = 1;
-    public void setPageNum(int pageNum) {
-        this.pageNum = pageNum;
-    }
-    private int pageSize = 2;  //固定值
-    public void setPageSize(int pageSize) {
-        this.pageSize = pageSize;
-    }
+public class CourseTypeAction extends BaseAction<CrmCourseType> {
     public String findAll() {
-        /*List<CrmCourseType> all = courseTypeService.findAll(crmCourseType);
+        /*List<CrmCourseType> all = courseTypeService.findAll(this.getModel());
         ActionContext.getContext().put("all", all);*/
-        PageBean<CrmCourseType> pageBean = courseTypeService.findAll(crmCourseType,pageNum,pageSize);
-        ActionContext.getContext().put("pageBean",pageBean);
+        PageBean<CrmCourseType> pageBean = this.getCourseTypeService().findAll(this.getModel(),this.getPageNum(),this.getPageSize());
+        this.put("pageBean",pageBean);
         return "findAll";
     }
 
@@ -46,9 +28,9 @@ public class CourseTypeAction extends ActionSupport implements ModelDriven<CrmCo
      * @return
      */
     public String addOrEditUI() {
-        if (StringUtils.isNotBlank(crmCourseType.getCourseTypeId())) {
-            CrmCourseType findCT = courseTypeService.findById(crmCourseType.getCourseTypeId());
-            ActionContext.getContext().getValueStack().push(findCT);
+        if (StringUtils.isNotBlank(this.getModel().getCourseTypeId())) {
+            CrmCourseType findCT = this.getCourseTypeService().findById(this.getModel().getCourseTypeId());
+            this.push(findCT);
         }
         return "addOrEditUI";
     }
@@ -58,9 +40,9 @@ public class CourseTypeAction extends ActionSupport implements ModelDriven<CrmCo
      * @return
      */
     public String addOrEdit() {
-        if (StringUtils.isNotBlank(crmCourseType.getCourseName()) || crmCourseType.getCourseCost()!=null ||
-                StringUtils.isNotBlank(crmCourseType.getRemark()) || crmCourseType.getTotal()!=null) {
-            courseTypeService.addOrEdit(crmCourseType);
+        if (StringUtils.isNotBlank(this.getModel().getCourseName()) || this.getModel().getCourseCost()!=null ||
+                StringUtils.isNotBlank(this.getModel().getRemark()) || this.getModel().getTotal()!=null) {
+            this.getCourseTypeService().addOrEdit(this.getModel());
         }
         return "addOrEdit";
     }

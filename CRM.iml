@@ -29,6 +29,7 @@
             <file>file://$MODULE_DIR$/src/config/struts/struts-department.xml</file>
             <file>file://$MODULE_DIR$/src/config/struts/struts-post.xml</file>
             <file>file://$MODULE_DIR$/src/config/struts/struts-courseType.xml</file>
+            <file>file://$MODULE_DIR$/src/config/struts/struts-classes.xml</file>
           </fileset>
           <propertiesKeys disabled="false" />
         </configuration>

@@ -3,6 +3,7 @@ package com.wdq.crm.utils;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.UUID;
 
 /**
  * Created by haier on 2017/7/9.
@@ -25,5 +26,13 @@ public class MyStringUtil {
             e.printStackTrace();
             return null;
         }
+    }
+
+    /**
+     * 获得一个32位随机字符串
+     * @return
+     */
+    public static String getUUID() {
+        return UUID.randomUUID().toString().replace("-","");
     }
 }

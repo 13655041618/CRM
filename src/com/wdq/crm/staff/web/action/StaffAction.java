@@ -3,6 +3,7 @@ package com.wdq.crm.staff.web.action;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
+import com.wdq.crm.base.BaseAction;
 import com.wdq.crm.department.domain.CrmDepartment;
 import com.wdq.crm.department.service.DepartmentService;
 import com.wdq.crm.staff.domain.CrmStaff;
@@ -14,22 +15,11 @@ import java.util.List;
 /**
  * Created by haier on 2017/7/9.
  */
-public class StaffAction extends ActionSupport implements ModelDriven<CrmStaff> {
-    private CrmStaff crmStaff = new CrmStaff();
-    @Override
-    public CrmStaff getModel() {
-        return crmStaff;
-    }
-
-    private StaffService staffService;
-
-    public void setStaffService(StaffService staffService) {
-        this.staffService = staffService;
-    }
+public class StaffAction extends BaseAction<CrmStaff> {
     public String login() {
-        CrmStaff findStaff = staffService.login(crmStaff);
+        CrmStaff findStaff = this.getStaffService().login(this.getModel());
         if (findStaff != null) {
-            ActionContext.getContext().getSession().put("loginStaff", findStaff);
+            this.putSession("loginStaff", findStaff);
             return SUCCESS;
         }
         this.addFieldError("","用户名或密码错误");
@@ -41,28 +31,21 @@ public class StaffAction extends ActionSupport implements ModelDriven<CrmStaff> 
     }
 
     public String findAll() {
-        List<CrmStaff> list = staffService.findAllStaff();
-        ActionContext.getContext().put("allStaff",list);
+        List<CrmStaff> list = this.getStaffService().findAllStaff();
+        this.put("allStaff",list);
         return "findAll";
     }
 
     public String editUI() {
-        CrmStaff findStaff = staffService.findStaffById(crmStaff.getStaffId());
-        ActionContext.getContext().getValueStack().push(findStaff);
-        List<CrmDepartment> allDepartment = departmentService.findAll();
-        ActionContext.getContext().getValueStack().set("allDepartment",allDepartment);
+        CrmStaff findStaff = this.getStaffService().findStaffById(this.getModel().getStaffId());
+        this.push(findStaff);
+        List<CrmDepartment> allDepartment = this.getDepartmentService().findAll();
+        this.set("allDepartment",allDepartment);
         return "editUI";
     }
-
-    private DepartmentService departmentService;
-
-    public void setDepartmentService(DepartmentService departmentService) {
-        this.departmentService = departmentService;
-    }
-
     public String edit() {
         //不能直接在action更新staff，因为crmstaff是模型驱动，获取到的值是在更新之前的值
-        staffService.update(crmStaff);
+        this.getStaffService().update(this.getModel());
         return "edit";
     }
 }

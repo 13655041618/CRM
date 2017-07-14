@@ -45,8 +45,14 @@
     <aop:config  proxy-target-class="true">
         <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.wdq.crm.*.service.*.* (..))"></aop:advisor>
     </aop:config>
+    <!--员工-->
     <import resource="applicationContext-staff.xml"></import>
+    <!--职位-->
     <import resource="applicationContext-department.xml"></import>
+    <!--部门-->
     <import resource="applicationContext-post.xml"></import>
+    <!--课程-->
     <import resource="applicationContext-courseType.xml"></import>
+    <!--班级-->
+    <import resource="applicationContext-classes.xml"></import>
 </beans>

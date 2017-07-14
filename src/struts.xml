@@ -9,14 +9,19 @@
     <constant name="struts.ui.theme" value="simple"></constant>
     <package name="common" extends="struts-default" namespace="/">
         <interceptors>
-            <interceptor name="loginInterceptor" class="com.wdq.crm.web.interceptor.LoginInterceptor"></interceptor>
             <interceptor-stack name="loginStack">
-                <interceptor-ref name="defaultStack"></interceptor-ref>
+                <interceptor-ref name="fileUpload">
+                    <param name="allowedExtensions">.xls,.xlsx</param>
+                </interceptor-ref>
+                <interceptor-ref name="defaultStack">
+                </interceptor-ref>
                 <interceptor-ref name="loginInterceptor">
                     <param name="excludeMethods">login</param>
                 </interceptor-ref>
             </interceptor-stack>
+            <interceptor name="loginInterceptor" class="com.wdq.crm.web.interceptor.LoginInterceptor"></interceptor>
         </interceptors>
+        <default-action-ref name="uiAction_*_*"/><!--如果找不到action，默认执行此action-->
         <global-results>
             <result name="login">/WEB-INF/pages/login.jsp</result>
         </global-results>
@@ -25,8 +30,12 @@
             <result>/WEB-INF/pages/{1}/{2}.jsp</result>
         </action>
     </package>
-
+    <!--员工-->
     <include file="config/struts/struts-staff.xml"></include>
+    <!--职务-->
     <include file="config/struts/struts-post.xml"></include>
+    <!--课程类别-->
     <include file="config/struts/struts-courseType.xml"></include>
+    <!--班级-->
+    <include file="config/struts/struts-classes.xml"></include>
 </struts>

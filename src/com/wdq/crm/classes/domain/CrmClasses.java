@@ -1,5 +1,7 @@
 package com.wdq.crm.classes.domain;
 
+import com.wdq.crm.courseType.domain.CrmCourseType;
+
 import java.util.Date;
 
 /**
@@ -26,7 +28,6 @@ public class CrmClasses {
      ) ;
      */
     private String classId;
-    private String courseTypeId;
     private String name;
     private Date beginTime;
     private Date endTime;
@@ -39,21 +40,13 @@ public class CrmClasses {
     private Date uploadTime;
     private String uploadPath;
     private String uploadFilename;
-
+    private CrmCourseType courseType;
     public String getClassId() {
         return classId;
     }
 
     public void setClassId(String classId) {
         this.classId = classId;
-    }
-
-    public String getCourseTypeId() {
-        return courseTypeId;
-    }
-
-    public void setCourseTypeId(String courseTypeId) {
-        this.courseTypeId = courseTypeId;
     }
 
     public String getName() {
@@ -150,5 +143,13 @@ public class CrmClasses {
 
     public void setUploadFilename(String uploadFilename) {
         this.uploadFilename = uploadFilename;
+    }
+
+    public CrmCourseType getCourseType() {
+        return courseType;
+    }
+
+    public void setCourseType(CrmCourseType courseType) {
+        this.courseType = courseType;
     }
 }
